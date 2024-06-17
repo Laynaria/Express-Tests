@@ -20,8 +20,13 @@ app.get("/wilders/:id", (req, res) => {
 
   const wilder = data.data.filter((wilder) =>
     wilder.id === id ? wilder : null
-  );
-  res.send(wilder);
+  )[0];
+
+  if (wilder !== undefined) {
+    return res.send(wilder);
+  }
+
+  return res.status(404).json({ Error: "This wilder doesn't exist." });
 });
 
 app.listen(port, () => {
