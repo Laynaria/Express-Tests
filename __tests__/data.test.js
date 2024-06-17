@@ -12,7 +12,7 @@ describe("Json tests", () => {
       { id: 1, name: "Benoît" },
       { id: 2, name: "Anthony" },
       { id: 3, name: "Ayoub" },
-      { id: 4, name: "Yavuuz" },
+      { id: 4, name: "Yavuz" },
     ]);
   });
 
