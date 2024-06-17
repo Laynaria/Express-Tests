@@ -1,9 +1,8 @@
 const express = require("express");
+const { browse, read } = require("./controllers/wildersController");
 
 const app = express();
 const port = 8000;
-
-const data = require("./data.json");
 
 app.use(express.json());
 
@@ -12,21 +11,11 @@ app.get("/", (_, res) => {
 });
 
 app.get("/wilders", (_, res) => {
-  res.send(data.data);
+  browse(_, res);
 });
 
 app.get("/wilders/:id", (req, res) => {
-  const id = parseInt(req.params.id, 10);
-
-  const wilder = data.data.filter((wilder) =>
-    wilder.id === id ? wilder : null
-  )[0];
-
-  if (wilder !== undefined) {
-    return res.send(wilder);
-  }
-
-  return res.status(404).json({ Error: "This wilder doesn't exist." });
+  read(req, res);
 });
 
 app.listen(port, () => {

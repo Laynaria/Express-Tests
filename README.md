@@ -19,11 +19,8 @@ data of four wilders.
 
 8- npm i jest supertest
 
-9- create a jest.config.js file
+9- create a `__tests__` folder and create an index.test.js and data.test.js file inside
 
-```js
-module.exports = {
-  preset: "ts-jest",
-  testEnvironment: "node",
-};
-```
+10- First tests : check if index.js and data.json files exists in their respective tests files
+
+11- Create a controller fodler with a wilderController and separate your logic from index.js in a browse and read function
