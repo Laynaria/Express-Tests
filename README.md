@@ -10,6 +10,7 @@ This project is a Demo workshop for my students at Wild Code School to learn how
 
 - `npm install express nodemon jest supertest`
 - Create an index.js file
+- Create two scripts in `package.json` : dev to run server, test to launch tests
 
 ### 2- Express Implementation
 
