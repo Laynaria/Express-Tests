@@ -24,3 +24,7 @@ data of four wilders.
 10- First tests : check if index.js and data.json files exists in their respective tests files
 
 11- Create a controller fodler with a wilderController and separate your logic from index.js in a browse and read function
+
+12- create a wildersController.test.js file and test if wilderController.js exist
+
+13- create some
