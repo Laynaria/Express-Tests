@@ -30,3 +30,9 @@ data of four wilders.
 13- create some tests to see if the browse and read function exist in wilderController.test.js
 
 14- create some tests to see if data exist in data.test.js
+
+15- switch main logic of app creation from index.js into a server.js function and make that function return app
+
+16- export this server function to import it into your index.js and index.test.js
+
+17- test the /wilders and /wilders/:id routes
