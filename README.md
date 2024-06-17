@@ -1,38 +1,42 @@
+# Workshop Test Demo
+
 This project is a Demo workshop for my students at Wild Code School to learn how to do some testing with Jest and Supertest
 
-Steps :
+## Steps :
 
-1- npm init
+### 1- Initialization
 
-2- npm install express nodemon
+- `npm init`
 
-3- touch index.js
+- `npm install express nodemon jest supertest`
+- Create an index.js file
 
-4- require express, use it and listen the server on a port variable
+### 2- Express Implementation
 
-5- use express json, and create a basic route to see if server is working
+- Require express
 
-6- create a data json or js file, import it and create a wilders route to return
-data of four wilders.
+- Use express, and listen the server based on a port variable.
+- Use express json and create a `/` route showing hello world to check if server works
+- create a server.js file and transfer it all the logic except port and listen inside a server function which will return app.
+- export that function and import it from index.js
 
-7- create a dynamic route to get a wilder based on an id param and return an error if wilder doesn't exist
+### 3- Data creation and real routes
 
-8- npm i jest supertest
+- create a data.json file, and import it in your server.js
 
-9- create a `__tests__` folder and create an index.test.js and data.test.js file inside
+- create a `/wilders` route in your server which will return the data of four wilders from your json
+- create a dynamic route which will return a wilder based on its id, or an error if this wilder doesn't exist
+- create a controllers folder and a wildersController.js file inside it
+- switch the logic from your routes into two functions called `read` and `browse` in your controller
 
-10- First tests : check if index.js and data.json files exists in their respective tests files
+### 4- Tests
 
-11- Create a controller fodler with a wilderController and separate your logic from index.js in a browse and read function
+- create a `__tests__` folder, and create three files named `data.test.js`, `server.test.js`, `wildersController.test.js` inside.
 
-12- create a wildersController.test.js file and test if wilderController.js exist
+- Check in each respective file if the data.js, server.js and wildersController.js files exist
 
-13- create some tests to see if the browse and read function exist in wilderController.test.js
+- Create some tests to see if data exist in `data.test.js`
 
-14- create some tests to see if data exist in data.test.js
+- Create some tests to see if the `read` and `browse` functions exist in `wildersController.test.js`
 
-15- switch main logic of app creation from index.js into a server.js function and make that function return app
-
-16- export this server function to import it into your index.js and index.test.js
-
-17- test the /wilders and /wilders/:id routes
+- In `server.test.js` require supertest and do some asynchronous testing on the `/wilders` and `/wilders/:id` routes. Hint : `await supertest(server()).get()`
