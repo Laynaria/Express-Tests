@@ -27,4 +27,6 @@ data of four wilders.
 
 12- create a wildersController.test.js file and test if wilderController.js exist
 
-13- create some
+13- create some tests to see if the browse and read function exist in wilderController.test.js
+
+14- create some tests to see if data exist in data.test.js
