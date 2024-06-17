@@ -15,9 +15,11 @@ Steps :
 6- create a data json or js file, import it and create a wilders route to return
 data of four wilders.
 
-7- npm i jest supertest
+7- create a dynamic route to get a wilder based on an id param and return an error if wilder doesn't exist
 
-8- create a jest.config.js file
+8- npm i jest supertest
+
+9- create a jest.config.js file
 
 ```js
 module.exports = {
